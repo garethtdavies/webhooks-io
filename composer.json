@@ -1,0 +1,21 @@
+{
+  "name": "wensleydale/webhooks-io",
+  "description": "A composer-ready version of the webhooks-io PHP client",
+  "keywords": ["webhooks-io"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gareth Davies",
+      "email": "hello@garethtdavies.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wensleydale\\WebhooksIo\\": "src/"
+    }
+  }
+}
