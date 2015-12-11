@@ -1144,7 +1144,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Object} params
 		 * @param {Function} callback
 		*/
-		public function login(struct $params=null){
+		public function login($params=null){
 			$endpoint = $this->$expandEndpoint('/v1/authenticate', []);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
