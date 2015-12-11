@@ -46,7 +46,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function registerAccount(struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/register', []);
+			$endpoint = $this->expandEndpoint('/v1/register', []);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -63,7 +63,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createSubAccount(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/subaccounts', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/subaccounts', [$account_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -80,7 +80,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getSubAccounts(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/subaccounts', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/subaccounts', [$account_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -97,7 +97,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getAccount(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id', [$account_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -114,7 +114,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateAccount(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id', [$account_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -131,7 +131,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteAccount(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id', [$account_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -152,7 +152,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createApplication(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications', [$account_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -170,7 +170,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateApplication(string $account_id, string $application_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id', [$account_id, $application_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id', [$account_id, $application_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -188,7 +188,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getApplication(string $account_id, string $application_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id', [$account_id, $application_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id', [$account_id, $application_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -205,7 +205,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getApplications(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications', [$account_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -223,7 +223,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteApplication(string $account_id, string $application_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id', [$account_id, $application_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id', [$account_id, $application_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -241,7 +241,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createApplicationVersion(string $account_id, string $application_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions', [$account_id, $application_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions', [$account_id, $application_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -260,7 +260,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateApplicationVersion(string $account_id, string $application_id, string $application_version_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions/:application_version_id', [$account_id, $application_id, $application_version_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions/:application_version_id', [$account_id, $application_id, $application_version_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -279,7 +279,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getApplicationVersion(string $account_id, string $application_id, string $application_version_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions/:application_version_id', [$account_id, $application_id, $application_version_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions/:application_version_id', [$account_id, $application_id, $application_version_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -297,7 +297,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getApplicationVersions(string $account_id, string $application_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions', [$account_id, $application_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions', [$account_id, $application_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -316,7 +316,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteApplicationVersion(string $account_id, string $application_id, string $application_version_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions/:application_version_id', [$account_id, $application_id, $application_version_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/versions/:application_version_id', [$account_id, $application_id, $application_version_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -337,7 +337,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createBucket(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/buckets', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/buckets', [$account_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -355,7 +355,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateBucket(string $account_id, string $bucket_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/buckets/:bucket_id', [$account_id, $bucket_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/buckets/:bucket_id', [$account_id, $bucket_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -373,7 +373,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getBucket(string $account_id, string $bucket_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/buckets/:bucket_id', [$account_id, $bucket_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/buckets/:bucket_id', [$account_id, $bucket_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -390,7 +390,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getBuckets(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/buckets', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/buckets', [$account_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -408,7 +408,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteBucket(string $account_id, string $bucket_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/buckets/:bucket_id', [$account_id, $bucket_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/buckets/:bucket_id', [$account_id, $bucket_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -429,7 +429,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createInput(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/inputs', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/inputs', [$account_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -447,7 +447,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateInput(string $account_id, string $input_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/inputs/:input_id', [$account_id, $input_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/inputs/:input_id', [$account_id, $input_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -465,7 +465,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getInput(string $account_id, string $input_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/inputs/:input_id', [$account_id, $input_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/inputs/:input_id', [$account_id, $input_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -483,7 +483,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getInputs(string $account_id, string $bucket_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/buckets/:bucket_id/inputs', [$account_id, $bucket_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/buckets/:bucket_id/inputs', [$account_id, $bucket_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -501,7 +501,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteInput(string $account_id, string $input_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/inputs/:input_id', [$account_id, $input_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/inputs/:input_id', [$account_id, $input_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -523,7 +523,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createDestination(string $account_id, string $input_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/inputs/:input_id/destinations', [$account_id, $input_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/inputs/:input_id/destinations', [$account_id, $input_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -541,7 +541,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateDestination(string $account_id, string $destination_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/destinations/:destination_id', [$account_id, $destination_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/destinations/:destination_id', [$account_id, $destination_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -559,7 +559,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getDestination(string $account_id, string $destination_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/destinations/:destination_id', [$account_id, $destination_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/destinations/:destination_id', [$account_id, $destination_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -577,7 +577,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getDestinations(string $account_id, string $input_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/inputs/:input_id/destinations', [$account_id, $input_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/inputs/:input_id/destinations', [$account_id, $input_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -595,7 +595,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteDestination(string $account_id, string $destination_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/destinations/:destination_id', [$account_id, $destination_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/destinations/:destination_id', [$account_id, $destination_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -616,7 +616,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createRecipe(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/recipes', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/recipes', [$account_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -634,7 +634,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateRecipe(string $account_id, string $recipe_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id', [$account_id, $recipe_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id', [$account_id, $recipe_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -652,7 +652,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function publishRecipe(string $account_id, string $recipe_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id/publish', [$account_id, $recipe_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id/publish', [$account_id, $recipe_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -670,7 +670,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getRecipe(string $account_id, string $recipe_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id', [$account_id, $recipe_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id', [$account_id, $recipe_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -687,7 +687,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getRecipes(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/recipes', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/recipes', [$account_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -705,7 +705,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteRecipe(string $account_id, string $recipe_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id', [$account_id, $recipe_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/recipes/:recipe_id', [$account_id, $recipe_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -722,7 +722,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function testRecipe(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/recipes/test', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/recipes/test', [$account_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -744,7 +744,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createConsumer(string $account_id, string $application_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers', [$account_id, $application_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers', [$account_id, $application_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -762,7 +762,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getConsumers(string $account_id, string $application_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers', [$account_id, $application_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers', [$account_id, $application_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -781,7 +781,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateConsumer(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -800,7 +800,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getConsumer(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -819,7 +819,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteConsumer(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -838,7 +838,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getConsumerDestinations(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -857,7 +857,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createConsumerDestination(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -877,7 +877,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateConsumerDestination(string $account_id, string $application_id, string $consumer_id, string $destination_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations/:destination_id', [$account_id, $application_id, $consumer_id, $destination_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations/:destination_id', [$account_id, $application_id, $consumer_id, $destination_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -897,7 +897,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteConsumerDestination(string $account_id, string $application_id, string $consumer_id, string $destination_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations/:destination_id', [$account_id, $application_id, $consumer_id, $destination_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/destinations/:destination_id', [$account_id, $application_id, $consumer_id, $destination_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -916,7 +916,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getConsumerBuckets(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/buckets', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/buckets', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -936,7 +936,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function sendConsumerWebhookRequest(string $account_id, string $application_id, string $consumer_id, string $bucket_key, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/send/:bucket_key', [$account_id, $application_id, $consumer_id, $bucket_key]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/send/:bucket_key', [$account_id, $application_id, $consumer_id, $bucket_key]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -955,7 +955,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getConsumerSubscription(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/check', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/check', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -974,7 +974,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getConsumerRequestLog(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/log', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/log', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -993,7 +993,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createClientToken(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/client-token', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/client-token', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -1012,7 +1012,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getEmbeddedViewHtml(string $account_id, string $application_id, string $consumer_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/embedded-view-html', [$account_id, $application_id, $consumer_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/applications/:application_id/consumers/:consumer_id/embedded-view-html', [$account_id, $application_id, $consumer_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -1033,7 +1033,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getOverviewReport(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/stats/overview', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/stats/overview', [$account_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1050,7 +1050,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getSummaryReport(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/stats/summary', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/stats/summary', [$account_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1067,7 +1067,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getRequestLog(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/log', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/log', [$account_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1089,7 +1089,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getIncomingMessage(string $account_id, string $incoming_message_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/incoming/:incoming_message_id', [$account_id, $incoming_message_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/incoming/:incoming_message_id', [$account_id, $incoming_message_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1107,7 +1107,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getOutgoingMessage(string $account_id, string $outgoing_message_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/outgoing/:outgoing_message_id', [$account_id, $outgoing_message_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/outgoing/:outgoing_message_id', [$account_id, $outgoing_message_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1125,7 +1125,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getOutgoingMessageStatus(string $account_id, string $outgoing_message_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/outgoing/:outgoing_message_id/status', [$account_id, $outgoing_message_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/outgoing/:outgoing_message_id/status', [$account_id, $outgoing_message_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1145,7 +1145,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function login($params=null){
-			$endpoint = $this->$expandEndpoint('/v1/authenticate', []);
+			$endpoint = $this->expandEndpoint('/v1/authenticate', []);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -1163,7 +1163,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function changePassword(string $account_id, string $user_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/users/:user_id/change_password', [$account_id, $user_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/users/:user_id/change_password', [$account_id, $user_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -1181,7 +1181,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getAPIToken(string $account_id, string $user_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/users/:user_id/api-token', [$account_id, $user_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/users/:user_id/api-token', [$account_id, $user_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1197,7 +1197,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function resetPassword(struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/reset_password', []);
+			$endpoint = $this->expandEndpoint('/v1/reset_password', []);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -1214,7 +1214,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function lookupPasswordChangeKey(string $password_change_key, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/password_change_key/:password_change_key', [$password_change_key]);
+			$endpoint = $this->expandEndpoint('/v1/password_change_key/:password_change_key', [$password_change_key]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1231,7 +1231,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function createUser(string $account_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/users', [$account_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/users', [$account_id]);
 			return $this->execute($endpoint, "POST", $params, []);
 		}
 
@@ -1249,7 +1249,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function updateUser(string $account_id, string $user_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/users/:user_id', [$account_id, $user_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/users/:user_id', [$account_id, $user_id]);
 			return $this->execute($endpoint, "PUT", $params, []);
 		}
 
@@ -1267,7 +1267,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getUser(string $account_id, string $user_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/users/:user_id', [$account_id, $user_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/users/:user_id', [$account_id, $user_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1285,7 +1285,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getUsers(string $account_id, string $user_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/users', [$account_id, $user_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/users', [$account_id, $user_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1303,7 +1303,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function deleteUser(string $account_id, string $user_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/users/:user_id', [$account_id, $user_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/users/:user_id', [$account_id, $user_id]);
 			return $this->execute($endpoint, "DELETE", $params, []);
 		}
 
@@ -1320,7 +1320,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function verifyEmailAddress(string $email_verification_key, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/verify/:email_verification_key', [$email_verification_key]);
+			$endpoint = $this->expandEndpoint('/v1/verify/:email_verification_key', [$email_verification_key]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1338,7 +1338,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function resendVerificationEmail(string $account_id, string $user_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/accounts/:account_id/users/:user_id/resend_verification', [$account_id, $user_id]);
+			$endpoint = $this->expandEndpoint('/v1/accounts/:account_id/users/:user_id/resend_verification', [$account_id, $user_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1358,7 +1358,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function healthCheck(struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/health', []);
+			$endpoint = $this->expandEndpoint('/v1/health', []);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1374,7 +1374,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getPlans(struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/plans', []);
+			$endpoint = $this->expandEndpoint('/v1/plans', []);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1391,7 +1391,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getPlan(string $plan_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/plans/:plan_id', [$plan_id]);
+			$endpoint = $this->expandEndpoint('/v1/plans/:plan_id', [$plan_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1407,7 +1407,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getTimezones(struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/util/timezones', []);
+			$endpoint = $this->expandEndpoint('/v1/util/timezones', []);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1423,7 +1423,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getRetryPolicies(struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/retry_policies', []);
+			$endpoint = $this->expandEndpoint('/v1/retry_policies', []);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
@@ -1440,7 +1440,7 @@ class WebhooksioAPI extends WebhooksioBase
 		 * @param {Function} callback
 		*/
 		public function getRetryPolicy(string $policy_id, struct $params=null){
-			$endpoint = $this->$expandEndpoint('/v1/retry_policies/:policy_id', [$policy_id]);
+			$endpoint = $this->expandEndpoint('/v1/retry_policies/:policy_id', [$policy_id]);
 			return $this->execute($endpoint, "GET", $params, []);
 		}
 
