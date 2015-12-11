@@ -137,6 +137,11 @@ class WebhooksioBase
         $feed = curl_init();
         curl_setopt_array($feed, $options);
         $return = curl_exec($feed);
+
+        if($return === false) {
+            throw new Exception(curl_error($feed), curl_errno($feed));
+        } //let's throw an exception
+
         curl_close($feed);
 
         return $return;
