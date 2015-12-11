@@ -1,5 +1,7 @@
 <?php namespace Wensleydale\WebhooksIo;
 
+use Exception;
+
 /**
  * Webhooks.io PHP-Client : Simple PHP base wrapper for the v1.0 API
  * 
